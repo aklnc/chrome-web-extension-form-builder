@@ -1,14 +1,28 @@
 {
-  "dependencies": {
-    "chrome-types": "^0.1.219"
-  },
+  "name": "react-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension in React!",
+  "main": "index.js",
   "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "rimraf": "^5.0.1"
+    "@types/chrome": "^0.0.243",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0"
   },
   "scripts": {
-    "clean": "rimraf src/",
-    "copy-files": "copyfiles -u 1 dev/**/*.html dev/**/*.json dev/**/*.css src/",
-    "build": "npm clean && tsc && yarn copy-files"
-  }
+    "start": "webpack --watch --progress --config webpack-dev.js",
+    "build": "webpack --watch --progress --config webpack-prod.js"
+  },
+  "author": "Aytaç Kılınç",
+  "license": "ISC"
 }

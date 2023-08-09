@@ -1,9 +1,0 @@
-{
-  "manifest_version": 3,
-  "name": "Form Builder",
-  "description": "A Chrome Web Extension to build your own forms.",
-  "version": "1.0",
-  "action": {
-    "default_popup": "popup/popup.html"
-  }
-}
