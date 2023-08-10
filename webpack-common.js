@@ -19,8 +19,7 @@ module.exports = {
       },
       {
         use: ["style-loader", "css-loader"],
-        test: /\.css?$/i,
-        exclude: /node_modules/,
+        test: /\.(sass|css)$/,
       },
       {
         type: "asset/resource",

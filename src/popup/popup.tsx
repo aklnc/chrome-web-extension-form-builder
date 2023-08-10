@@ -1,11 +1,24 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+// @ts-ignore
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./popup.css";
 
 import App from "./App";
 
 /// <reference types="chrome"/>
+
+const fontAwesomeLink = document.createElement("link");
+fontAwesomeLink.rel = "stylesheet";
+fontAwesomeLink.href =
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
+fontAwesomeLink.integrity =
+  "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==";
+fontAwesomeLink.crossOrigin = "anonymous";
+fontAwesomeLink.referrerPolicy = "no-referrer";
+
+document.head.appendChild(fontAwesomeLink);
 
 const app = document.createElement("div");
 app.id = "root";
