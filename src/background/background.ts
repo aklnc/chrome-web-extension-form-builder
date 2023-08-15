@@ -1,22 +1,23 @@
 /// <reference types="chrome"/>
 
 chrome.runtime.onInstalled.addListener((details) => {
-  chrome.storage.sync.set({ dataset: [], selection: [] });
+  chrome.storage.sync.set({ dataset: [], selection: [], fields: [] });
   chrome.contextMenus.create({
     title: "Form Builder",
     id: "ctxMenuMain",
     contexts: ["page", "selection"],
   });
-  chrome.contextMenus.onClicked.addListener((e) => {
-    chrome.storage.sync.get(["selection"]).then((result) => {
-      let selectionData: string[] = result.selection;
+});
 
-      selectionData.push(e.selectionText!);
+chrome.contextMenus.onClicked.addListener((e) => {
+  chrome.storage.sync.get(["selection"]).then((result) => {
+    let selectionData: string[] = result.selection;
 
-      console.log(selectionData);
+    selectionData.push(e.selectionText!);
 
-      chrome.storage.sync.set({ selection: selectionData });
-    });
+    console.log(selectionData);
+
+    chrome.storage.sync.set({ selection: selectionData });
   });
 });
 

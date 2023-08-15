@@ -1,0 +1,14 @@
+.continue-container #previous {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.continue-container #continue {
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.error-text {
+    margin: 15px;
+}
