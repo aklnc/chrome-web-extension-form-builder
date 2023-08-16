@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
-.error-text {
+.error-text, .fields, .json-beautifier {
     margin: 15px;
+}
+
+.key-value {
+    padding-left: 15px;
 }
